@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>noVNC Demo</title>
+        <link rel="stylesheet" href="include/plain.css">
+    </head>
+    <body>
+
+        <input id='startButton' type='button' value='Start' style='width:100px'
+            onclick="start();" disabled>&nbsp;
+
+        <div id="VNC_screen">
+            <div id="VNC_status_bar" class="VNC_status_bar" style="margin-top: 0px;">
+                <table border=0 width=100%><tr>
+                    <td><div id="VNC_status">Loading</div></td>
+                </tr></table>
+            </div>
+            <canvas id="VNC_canvas" width="640px" height="20px">
+                Canvas not supported.
+            </canvas>
+        </div>
+
+    </body>
+
+    <!--
+    <script type='text/javascript' 
+        src='http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js'></script>
+    -->
+
+    <script>
+        VNC_uri_prefix = "http://github.com/kanaka/noVNC/raw/HEAD/include/";
+    </script>
+    <script src="http://github.com/kanaka/noVNC/raw/HEAD/include/vnc.js"></script>
+    <script src="http://github.com/kanaka/noVNC/raw/HEAD/tests/playback.js"></script>
+
+    <script>
+        var start_time;
+
+        updateState = function (rfb, state, oldstate, msg) {
+            switch (state) {
+                case 'failed':
+                case 'fatal':
+                    Util.Error("noVNC sent '" + state + "' state during iteration " + iteration);
+                    test_state = 'failed';
+                    break;
+                case 'loaded':
+                    $('startButton').disabled = false;
+                    break;
+            }
+            if (typeof msg !== 'undefined') {
+                $('VNC_status').innerHTML = msg;
+            }
+        }
+
+        function start() {
+            $('startButton').value = "Running";
+            $('startButton').disabled = true;
+
+            iterations = 1;
+            iteration = 0;
+            start_time = (new Date()).getTime();
+
+            next_iteration();
+        }
+
+        function finish() {
+            // Finished with all iterations
+            var total_time, end_time = (new Date()).getTime();
+            total_time = end_time - start_time;
+
+            iter_time = parseInt(total_time / iterations, 10);
+            Util.Info(iterations + " iterations took " + total_time + "ms, " +
+                    iter_time + "ms per iteration");
+            rfb.get_canvas().stop();   // Shut-off event interception
+            $('startButton').disabled = false;
+            $('startButton').value = "Start";
+
+        }
+
+        window.onload = function() {
+            mode = 'realtime';
+            Util.Info("VNC_frame_data.length: " + VNC_frame_data.length);
+            rfb = RFB({'target': 'VNC_canvas',
+                       'updateState': updateState});
+            rfb.testMode(send_array);
+        }
+    </script>
+</html>
