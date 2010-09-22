@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <title>WebKit Canvas Rendering Bug</title>
+    </head>
+    <body>
+
+        <div id="intro" style="width: 600px;">
+            This page uses the rendering engine from <a
+                href="http://github.com/kanaka/novnc">noVNC</a>  to
+            demonstrate a Canvas rendering bug in <a
+                href="http://webkit.org/">WebKit</a>. This bug was
+            introduced between WebKit revision 66240 and 66396.
+
+            The noVNC bug is <a
+                href="http://github.com/kanaka/noVNC/issues#issue/28">here</a>.
+
+            <br><br>
+
+            When you press <b>Start</b>, the noVNC engine will playback the
+            beginning of a VNC/RFB session. You should see a complete 1024x768 Ubuntu
+            desktop rendered below. If you have the bug only the first
+            few rows of pixels will render. Note that the canvas
+            operations have succeeded case, but they are simply not
+            rendering correctly; if you resize the browser slightly,
+            the entire desktop will immediately render.
+        </div>
+
+        <br>
+
+        <input id='startButton' type='button' value='Start' style='width:100px'
+            onclick="start();" disabled>&nbsp;
+
+        <br><br>
+
+        <div id="VNC_screen">
+            <div id="VNC_status_bar" class="VNC_status_bar" style="margin-top: 0px;">
+                <table border=0 width=100%><tr>
+                    <td><div id="VNC_status">Loading</div></td>
+                </tr></table>
+            </div>
+            <canvas id="VNC_canvas" style="border-style: solid;" width="640px" height="20px">
+                Canvas not supported.
+            </canvas>
+        </div>
+
+        <br><br>
+
+        Status Messages:<br>
+        <textarea id="messages" style="font-size: 9;" cols=80 rows=7></textarea>
+
+        <br><br>
+
+    </body>
+
+    <!--
+    <script type='text/javascript' 
+        src='http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js'></script>
+    -->
+
+    <script>
+        VNC_uri_prefix = "http://github.com/kanaka/noVNC/raw/HEAD/include/";
+    </script>
+    <script src="http://github.com/kanaka/noVNC/raw/HEAD/include/vnc.js"></script>
+    <script src="http://github.com/kanaka/noVNC/raw/HEAD/include/playback.js"></script>
+    <script src="data_raw.js"></script>
+
+    <script>
+        var start_time;
+
+        function message(str) {
+            console.log(str);
+            var cell = $('messages');
+            cell.innerHTML += str + "\n";
+            cell.scrollTop = cell.scrollHeight;
+        }
+
+        updateState = function (rfb, state, oldstate, msg) {
+            switch (state) {
+                case 'failed':
+                case 'fatal':
+                    message("noVNC sent '" + state + "' state during iteration " + iteration + " frame " + frame_idx);
+                    test_state = 'failed';
+                    break;
+                case 'loaded':
+                    $('startButton').disabled = false;
+                    break;
+            }
+            if (typeof msg !== 'undefined') {
+                $('VNC_status').innerHTML = msg;
+            }
+        }
+
+        function start() {
+            $('startButton').value = "Running";
+            $('startButton').disabled = true;
+
+            iterations = 1;
+            iteration = 0;
+            start_time = (new Date()).getTime();
+
+            message("Starting playback");
+            mode = 'perftest';
+
+            next_iteration();
+        }
+
+        function finish() {
+            // Finished with all iterations
+            var total_time, end_time = (new Date()).getTime();
+            total_time = end_time - start_time;
+
+            iter_time = parseInt(total_time / iterations, 10);
+            message("Rendering took " + total_time + "ms");
+            rfb.get_canvas().stop();   // Shut-off event interception
+            $('startButton').disabled = false;
+            $('startButton').value = "Start";
+
+        }
+
+        window.onload = function() {
+            message("VNC_frame_data.length: " + VNC_frame_data.length);
+            Util.init_logging('debug'); // So canvas sticks around
+            rfb = RFB({'target': 'VNC_canvas',
+                    'updateState': updateState});
+            rfb.testMode(send_array);
+        }
+    </script>
+</html>
