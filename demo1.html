@@ -55,17 +55,17 @@
                     test_state = 'failed';
                     break;
                 case 'loaded':
-                    $('startButton').disabled = false;
+                    $D('startButton').disabled = false;
                     break;
             }
             if (typeof msg !== 'undefined') {
-                $('VNC_status').innerHTML = msg;
+                $D('VNC_status').innerHTML = msg;
             }
         }
 
         function start() {
-            $('startButton').value = "Running";
-            $('startButton').disabled = true;
+            $D('startButton').value = "Running";
+            $D('startButton').disabled = true;
 
             iterations = 1;
             iteration = 0;
@@ -83,8 +83,8 @@
             Util.Info(iterations + " iterations took " + total_time + "ms, " +
                     iter_time + "ms per iteration");
             rfb.get_canvas().stop();   // Shut-off event interception
-            $('startButton').disabled = false;
-            $('startButton').value = "Start";
+            $D('startButton').disabled = false;
+            $D('startButton').value = "Start";
 
         }
 
