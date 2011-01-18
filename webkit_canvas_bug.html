@@ -62,7 +62,7 @@
     </script>
     <script src="http://github.com/kanaka/noVNC/raw/HEAD/include/vnc.js"></script>
     <script src="http://github.com/kanaka/noVNC/raw/HEAD/include/playback.js"></script>
-    <script src="data_raw.js"></script>
+    <script src="data/bug_raw.js"></script>
 
     <script>
         var start_time;
@@ -120,7 +120,7 @@
         window.onload = function() {
             message("VNC_frame_data.length: " + VNC_frame_data.length);
             Util.init_logging('debug'); // So canvas sticks around
-            rfb = RFB({'target': 'VNC_canvas',
+            rfb = RFB({'target': $D('VNC_canvas'),
                     'updateState': updateState});
             rfb.testMode(send_array);
         }

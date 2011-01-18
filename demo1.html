@@ -42,7 +42,7 @@
     </script>
     <script src="http://github.com/kanaka/noVNC/raw/HEAD/include/vnc.js"></script>
     <script src="http://github.com/kanaka/noVNC/raw/HEAD/include/playback.js"></script>
-    <script src="data_demo1.js"></script>
+    <script src="data/demo1.js"></script>
 
     <script>
         var start_time;
@@ -91,7 +91,7 @@
         window.onload = function() {
             mode = 'realtime';
             Util.Info("VNC_frame_data.length: " + VNC_frame_data.length);
-            rfb = RFB({'target': 'VNC_canvas',
+            rfb = RFB({'target': $D('VNC_canvas'),
                        'updateState': updateState});
             rfb.testMode(send_array);
         }
