@@ -1,0 +1,43 @@
+<html>
+    <!-- 
+    noVNC example: simple example using default UI
+    Copyright (C) 2010 Joel Martin
+    Licensed under LGPL-3 (see noVNC/LICENSE.txt)
+    -->
+    <head>
+        <title>noVNC</title>
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <link rel="stylesheet" href="noVNC/include/plain.css">
+        <link rel="alternate stylesheet" href="noVNC/include/black.css" TITLE="Black">
+        <!--
+        <script type='text/javascript' 
+            src='http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js'></script>
+        -->
+        <script>
+            VNC_uri_prefix = "noVNC/include/";
+        </script>
+        <script src="noVNC/include/vnc.js"></script>
+        <script src="noVNC/include/ui.js"></script>
+    </head>
+
+    <body>
+        <div style="width: 600">
+            noVNC is a full VNC client implemented using HTML5 Canvas and WebSockets.
+            You will need to either use a VNC server with WebSockets
+            support or use <a href="https://github.com/kanaka/websockify">websockify</a>
+            to proxy the raw TCP socket data to the WebSockets API of
+            your browser. See the noVNC <a href="https://github.com/kanaka/noVNC">README</a>
+            for more information.
+        </div>
+        <br>
+
+        <div id='vnc'>Loading</div>
+
+        <script>
+        window.onload = function () {
+            UI.load('vnc');
+        };
+        </script>
+
+    </body>
+</html>
