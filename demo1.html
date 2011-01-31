@@ -17,7 +17,7 @@
         <br><br>
 
         <input id='startButton' type='button' value='Start' style='width:100px'
-            onclick="start();" disabled>&nbsp;
+            onclick="startit();" disabled>&nbsp;
 
         <div id="VNC_screen">
             <div id="VNC_status_bar" class="VNC_status_bar" style="margin-top: 0px;">
@@ -63,7 +63,7 @@
             }
         }
 
-        function start() {
+        function startit() {
             $D('startButton').value = "Running";
             $D('startButton').disabled = true;
 
