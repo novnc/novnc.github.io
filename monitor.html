@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <!-- 
+    noVNC example: simple example using default UI
+    Copyright (C) 2010 Joel Martin
+    Licensed under LGPL-3 (see noVNC/LICENSE.txt)
+    -->
+    <head>
+        <title>noVNC</title>
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <link rel="shortcut icon" href="noVNC/favicon.ico" />
+        <link rel="stylesheet" href="noVNC/include/plain.css">
+        <link rel="alternate stylesheet" href="noVNC/include/black.css" TITLE="Black">
+        <!--
+        <script type='text/javascript' 
+            src='http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js'></script>
+        -->
+        <script>
+            INCLUDE_URI = "noVNC/include/";
+        </script>
+        <script src="noVNC/include/vnc.js"></script>
+        <script src="noVNC/include/ui.js"></script>
+
+        <style>
+            #scr_table {
+                padding: 0px;
+                border: 0px none;
+                border-collapse: collapse;
+            }
+            #scr_table td {
+                padding: 0px;
+                margin: 0px;
+                border: 0px none;
+                border-collapse: collapse;
+            }
+            #scr_tl {
+                width: 34px; height: 34px;
+                background: url('noVNC/images/full_700_topleft.png') no-repeat;
+            }
+            #scr_t {
+                height: 34px;
+                background: url('noVNC/images/full_700_top.png') repeat-x;
+            }
+            #scr_tr {
+                width: 34px; height: 34px;
+                background: url('noVNC/images/full_700_topright.png') no-repeat;
+            }
+            #scr_l {
+                width: 34px;
+                background: url('noVNC/images/full_700_left.png') repeat-y;
+            }
+            #scr_center {
+                height: 203px;
+                background: url('noVNC/images/full_700_base.png') center top no-repeat;
+            }
+            #scr_r {
+                width: 34px;
+                background: url('noVNC/images/full_700_right.png') repeat-y;
+            }
+            #scr_bl {
+                width: 34px; height: 34px;
+                background: url('noVNC/images/full_700_bottomleft.png') no-repeat;
+            }
+            #scr_b {
+                height: 34px;
+                background: url('noVNC/images/full_700_bottom.png') repeat-x;
+            }
+            #scr_br {
+                width: 34px; height: 34px;
+                background: url('noVNC/images/full_700_bottomright.png') no-repeat;
+            }
+
+            #VNC_clipboard {
+                display: none;
+            }
+            #vnc {
+                margin: 0px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div style="width: 600px">
+            noVNC is a full VNC client implemented using HTML5 Canvas and WebSockets.
+            You will need to either use a VNC server with WebSockets
+            support or use <a href="https://github.com/kanaka/websockify">websockify</a>
+            to proxy the raw TCP socket data to the WebSockets API of
+            your browser. See the noVNC <a href="https://github.com/kanaka/noVNC">README</a>
+            and <a href="http://kanaka.github.com/noVNC">website</a>
+            for more information.
+        </div>
+        <br>
+
+        <table id="scr_table">
+        <tr>
+            <td id=scr_tl></td><td id=scr_t></td><td id=scr_tr></td>
+        </tr>
+        <tr>
+            <td id=scr_l></td>
+            <td id=scr_c>
+                <div id='vnc'>Loading</div>
+            </td>
+            <td id=scr_r></td>
+        </tr>
+        <tr>
+            <td id=scr_bl></td><td id=scr_b></td><td id=scr_br></td>
+        </tr>
+        <tr>
+            <td></td><td id=scr_center></td><td></td>
+        </tr>
+        </table>
+
+        <script>
+        window.onload = function () {
+            UI.load('vnc');
+        };
+        </script>
+
+    </body>
+</html>
