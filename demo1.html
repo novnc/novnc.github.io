@@ -3,7 +3,6 @@
     <head>
         <title>noVNC Demo</title>
         <link rel="shortcut icon" href="noVNC/images/favicon.ico" />
-        <link rel="stylesheet" href="noVNC/include/plain.css">
     </head>
     <body>
 
@@ -14,6 +13,9 @@
             noVNC's decoding and rendering logic, but stubs out the
             keyboard/mouse input and the WebSockets network
             connection.
+            <strong>The red and blue channels are reversed because
+                this capture was taken prior to a change in the way
+                noVNC initializes with the server.</strong>
         </div>
 
         <br><br>
@@ -84,10 +86,12 @@
             iter_time = parseInt(total_time / iterations, 10);
             Util.Info(iterations + " iterations took " + total_time + "ms, " +
                     iter_time + "ms per iteration");
-            rfb.get_canvas().stop();   // Shut-off event interception
+            // Shut-off event interception
+            rfb.get_mouse().ungrab();
+            rfb.get_keyboard().ungrab();
             $D('startButton').disabled = false;
             $D('startButton').value = "Start";
-
+            $D('VNC_status').innerHTML = "Done";
         }
 
         window.onload = function() {
