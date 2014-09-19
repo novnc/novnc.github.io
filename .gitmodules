@@ -4,3 +4,6 @@
 [submodule "noVNC-js1k"]
 	path = noVNC-js1k
         url = git://github.com/kanaka/noVNC-js1k.git
+[submodule "noVNC-latest"]
+	path = noVNC-latest
+	url = git://github.com/kanaka/novnc.git
