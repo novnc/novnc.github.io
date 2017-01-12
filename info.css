@@ -33,6 +33,35 @@ a {
     color: #24120f;
 }
 
+/*Default noVNC logo.*/
+/* From: http://fonts.googleapis.com/css?family=Orbitron:700 */
+@font-face {
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 700;
+    /* TODO: update to using the noVNC/ submodule instead once that is updated */
+    src: local('?'), url('noVNC-latest/app/styles/Orbitron700.woff') format('woff'),
+    url('noVNC-latest/app/styles/Orbitron700.ttf') format('truetype');
+}
+.noVNC_logo {
+    color: yellow;
+    font-size: 4.0em;
+    font-family: 'Orbitron', 'OrbitronTTF', sans-serif;
+    line-height: 90%;
+    text-shadow: 0.1em 0.1em 0 black;
+    padding: 0.5em;
+}
+.noVNC_logo span {
+    color:green;
+}
+#noVNC_author {
+    font-size: 2.0em;
+    color: #d0d0d0;
+}
+#noVNC_author a {
+    color: #d0d0d0;
+}
+
 .description {
     font-size: 1.2em;
     margin-bottom: 30px;
