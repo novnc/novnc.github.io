@@ -1,36 +1,21 @@
 body {
-    margin-top: 1.0em;
-    background-color: #dbedf0;
+    background-color: #ffffff;
     font-family: "FreeSans", "sans-serif", "Sans", "Arial";
     color: #000000;
+    margin: 0;
 }
 
-#container {
-    margin: 0 auto;
-    width: 700px;
+#top {
+    padding-top: 1.5em;
+    background-color: #494949;
 }
-
-h1 {
-    font-size: 3.8em;
-    color: #24120f;
-    margin-bottom: 3px;
-}
-h1 .small {
-    font-size: 0.4em;
-}
-h1 a {
+#top a {
     text-decoration: none;
 }
-h2 {
-    font-size: 1.5em;
-    color: #24120f;
-}
-h3 {
-    text-align: center;
-    color: #24120f;
-}
-a {
-    color: #24120f;
+
+.wrapper {
+    margin: auto;
+    max-width: 700px;
 }
 
 /*Default noVNC logo.*/
@@ -64,13 +49,27 @@ a {
 
 .description {
     font-size: 1.2em;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin-top: 40px;
+    padding: 0.5em;
     font-style: italic;
+    background-color: #909090;
+    color: #ffffff;
 }
 
 .download {
     float: right;
+}
+
+#content a {
+    color: #24120f;
+}
+#content h2 {
+    font-size: 1.5em;
+    color: #24120f;
+}
+#content h3 {
+    text-align: center;
+    color: #24120f;
 }
 
 pre {
