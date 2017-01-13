@@ -61,7 +61,9 @@ body {
 }
 
 #content a {
-    color: #24120f;
+    color: rgb(110, 132, 163);
+    text-decoration: none;
+    font-weight: bold;
 }
 #content h1 {
     font-size: 1.5em;
