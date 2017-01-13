@@ -63,14 +63,10 @@ body {
 #content a {
     color: #24120f;
 }
-#content h2 {
+#content h1 {
     font-size: 1.5em;
     color: #24120f;
     border-bottom: 1px solid #e0e0e0;
-}
-#content h3 {
-    text-align: center;
-    color: #24120f;
 }
 
 pre {
