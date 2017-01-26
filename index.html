@@ -1,14 +1,20 @@
 <html>
     <head>
         <script>
-            // Try this immediately to preserve query string
+            // Redirect to noVNC app if there are query parameters, otherwise go
+            // to the info page. Try this immediately to preserve query string.
             var l = window.location
-            window.location = "http://noVNC.com/noVNC/vnc.html" + l.search + l.hash;
+            if (l.search !== "" || l.hash !== "") {
+                window.location = "http://noVNC.com/noVNC/vnc.html" + l.search +
+                    l.hash;
+            } else {
+                window.location = "http://noVNC.com/info.html";
+            }
             // Fallback to http-equiv after 5 seconds
         </script>
-        <meta http-equiv="refresh" content="5; url=http://noVNC.com/noVNC/vnc.html" />
+        <meta http-equiv="refresh" content="5; url=http://noVNC.com/info.html" />
     </head>
     <body>
-        <p>Moved to <a href="http://noVNC.com/noVNC/vnc.html">http://noVNC.com/noVNC/vnc.html</a></p>
+        <p>Moved to <a href="http://noVNC.com/info.html">http://noVNC.com/noVNC/vnc.html</a></p>
     </body>
 </html>
