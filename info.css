@@ -17,6 +17,11 @@ body {
     margin: auto;
     max-width: 700px;
 }
+.wrapper img {
+    float: center;
+    max-width: 700px;
+    max-height: 700px;
+}
 
 /*Default noVNC logo.*/
 /* From: http://fonts.googleapis.com/css?family=Orbitron:700 */
