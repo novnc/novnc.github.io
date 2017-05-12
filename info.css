@@ -18,9 +18,8 @@ body {
     max-width: 700px;
 }
 .wrapper img {
-    float: center;
     max-width: 700px;
-    max-height: 700px;
+    max-height: 1200px;
 }
 
 /*Default noVNC logo.*/
