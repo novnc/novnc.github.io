@@ -44,7 +44,6 @@ body {
     font-size: 4.0em;
     font-family: 'Orbitron', 'OrbitronTTF', sans-serif;
     line-height: 90%;
-    text-shadow: 0.1em 0.1em 0 black;
     padding: 0.5em;
 }
 .noVNC_logo span {
