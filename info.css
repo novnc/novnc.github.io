@@ -46,6 +46,7 @@ body {
     line-height: 90%;
     padding-left: 0.5em;
     padding-right: 0.5em;
+    text-shadow: 0.1em 0.1em 0 black;
 }
 .noVNC_logo span {
     color:green;
