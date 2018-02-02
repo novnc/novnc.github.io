@@ -38,9 +38,8 @@ body {
     font-family: 'Orbitron';
     font-style: normal;
     font-weight: 700;
-    /* TODO: update to using the noVNC/ submodule instead once that is updated */
-    src: local('?'), url('noVNC-latest/app/styles/Orbitron700.woff') format('woff'),
-    url('noVNC-latest/app/styles/Orbitron700.ttf') format('truetype');
+    src: local('?'), url('noVNC/app/styles/Orbitron700.woff') format('woff'),
+    url('noVNC/app/styles/Orbitron700.ttf') format('truetype');
 }
 .noVNC_logo {
     color: yellow;

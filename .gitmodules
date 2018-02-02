@@ -1,6 +1,3 @@
 [submodule "noVNC"]
 	path = noVNC
 	url = https://github.com/novnc/noVNC.git
-[submodule "noVNC-latest"]
-	path = noVNC-latest
-	url = https://github.com/novnc/novnc.git
