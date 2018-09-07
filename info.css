@@ -51,13 +51,6 @@ body {
 .noVNC_logo span {
     color:green;
 }
-#noVNC_author {
-    font-size: 2.0em;
-    color: #d0d0d0;
-}
-#noVNC_author a {
-    color: #d0d0d0;
-}
 
 .description {
     font-size: 1.2em;
@@ -68,11 +61,6 @@ body {
     color: #ffffff;
 }
 
-.download {
-    display: inline;
-    position: absolute;
-    right: 0px;
-}
 
 #content a {
     color: rgb(110, 132, 163);
