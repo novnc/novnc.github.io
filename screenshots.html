@@ -1,189 +1,166 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 
-  <!-- TODO: Update to use the noVNC/ submodule instead, once it's updated -->
-  <!-- Firefox currently mishandles SVG, see #1419039
-  <link rel="icon" sizes="any" type="image/svg+xml"
-        href="noVNC/app/images/icons/novnc-icon.svg" />
-  -->
-  <!-- Repeated last so that legacy handling will pick this -->
-  <link rel="icon" sizes="16x16" type="image/png"
-        href="noVNC/app/images/icons/novnc-16x16.png" />
+    <!-- TODO: Update to use the noVNC/ submodule instead, once it's updated -->
+    <!-- Firefox currently mishandles SVG, see #1419039
+    <link rel="icon" sizes="any" type="image/svg+xml"
+          href="noVNC/app/images/icons/novnc-icon.svg" />
+    -->
+    <!-- Repeated last so that legacy handling will pick this -->
+    <link rel="icon" sizes="16x16" type="image/png"
+          href="noVNC/app/images/icons/novnc-16x16.png" />
 
-  <link rel="stylesheet" href="info.css" />
+    <link rel="stylesheet" href="info.css" />
 
-  <title>noVNC Videos and Screenshots</title>
-</head>
+    <title>noVNC Videos and Screenshots</title>
+  </head>
 
-<body>
-  <a href="https://github.com/novnc/noVNC" class="fork_banner">
-    <img src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
-         alt="Fork me on GitHub" />
-  </a>
+  <body>
+    <a href="https://github.com/novnc/noVNC" class="fork_banner">
+      <img src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+           alt="Fork me on GitHub" />
+    </a>
 
-  <div id="top">
+    <div id="top">
 
-    <div class="wrapper">
-
-      <a href="info.html" class="noVNC_logo">
-        <span>no</span>VNC</a>
-
-    </div>
-
-    <div class="description">
       <div class="wrapper">
-        Open Source VNC client using HTML5 (WebSockets, Canvas)
+
+        <a href="info.html" class="noVNC_logo">
+          <span>no</span>VNC</a>
+
       </div>
+
+      <div class="description">
+        <div class="wrapper">
+          Open Source VNC client using HTML5 (WebSockets, Canvas)
+        </div>
+      </div>
+
     </div>
 
-  </div>
-
-  <div class="menu">
-    <a href="info.html">Home</a>
-    <a href="https://github.com/novnc/noVNC/releases">Download</a>
-    <a href="http://novnc.com/noVNC/vnc.html">Demo</a>
-    <a href="screenshots.html" class="selected">Media</a>
-    <a href="https://github.com/novnc/noVNC">GitHub</a>
-    <a href="https://groups.google.com/forum/?fromgroups#!forum/novnc">Forum</a>
-    <a href="https://github.com/novnc/noVNC/issues">Report bug</a>
-  </div>
-
-  <div id="content" class="wrapper">
-
-    <p>See <a href="info.html">homepage</a> and
-      <a href="https://github.com/novnc/noVNC/blob/master/README.md">README</a>
-      for more info.</p>
-
-<br/>
-<br/>
-
-<iframe width="700" height="393"
-        src="https://www.youtube.com/embed/b5tBNdncDNk?ecver=1" frameborder="0"
-        allowfullscreen>
-</iframe>
-<br/>
-
-A very quick 1 minute demo showing noVNC in Firefox on Windows 10 used to
-connect to a GNOME desktop.
-
-<br/>
-<br/>
-<br/>
-
-<a href="img/noVNC-1-login.png" target="_blank">
-  <img src="img/noVNC-1-login.png"/>
-</a>
-<br/>
-The login screen of noVNC. You will be prompted for a password if your server
-requires one.
-
-<br/>
-<br/>
-<br/>
-
-<a href="img/noVNC-2-translations.png" target="_blank">
-  <img src="img/noVNC-2-translations.png"/>
-</a>
-<br/>
-The interface is translated. German translation shown here.
-
-<br/>
-<br/>
-<br/>
-
-<a href="img/noVNC-3-connected.png" target="_blank">
-  <img src="img/noVNC-3-connected.png"/>
-</a>
-<br/>
-Connected to an <em>TigerVNC</em> server running on a Fedora 25 workstation
-with an GNOME 3 desktop, Google Chrome, gnome-calculator, gnome-terminal and
-nautilus. Yes, that's Chrome running "inside" of Firefox. Clicking the small
-handle to the left will open the control bar.
-
-<br/>
-<br/>
-<br/>
-
-<a href="img/noVNC-4-settings.png" target="_blank">
-  <img src="img/noVNC-4-settings.png"/>
-</a>
-<br/>
-There are many settings in the interface, including local cursor, scaling,
-clipping mode for viewport panning and automatic reconnection.
-
-<br/>
-<br/>
-<br/>
-
-<a href="img/noVNC-5-clipboard.png" target="_blank">
-  <img src="img/noVNC-5-clipboard.png"/>
-</a>
-<br/>
-A solution for clipboard transfer is available. Text copied in the remote
-desktop will appear in the clipboard box in noVNC's interface. You can then
-copy the text from that box to access it in your local clipboard. Any text put
-into the clipboard box will be sent to the remote clipboard as well.
-
-<br/>
-<br/>
-<br/>
-
-<a href="img/noVNC-6-extrabuttons.png" target="_blank">
-  <img src="img/noVNC-6-extrabuttons.png"/>
-</a>
-<br/>
-Some keyboard keys and combinations are intercepted by the browser. We have
-added the most common keys to the interface to allow such keys to be sent to
-the remote desktop. Note that the control bar can be dragged to whichever side
-you prefer, simply drag the handle.
-
-<br/>
-<br/>
-<br/>
-
-<a href="img/noVNC-7-android.png" target="_blank">
-  <img src="img/noVNC-7-android.png"/>
-</a>
-<br/>
-Connected to the same remote system using Firefox on a Samsung Galaxy S8
-running Android 7. Notice the mouse and keyboard buttons in the control bar for
-selecting the active mouse button and for toggling the on-screen keyboard. You
-can run noVNC in fullscreen mode if you want (third button from the bottom).
-
-<br/>
-<br/>
-<br/>
-
-<a href="img/noVNC-8-ipad.jpg" target="_blank">
-  <img src="img/noVNC-8-ipad.jpg"/>
-</a>
-<br/>
-Connected to the same remote system using Safari on an iPad mini 3 running iOS
-10.
-
-<br/>
-<br/>
-<br/>
-
-    <hr>
-
-    <p align="center"><em><small>This page was last updated the
-        <time datetime="2017-05-13">13th of May 2017</time>
-    </small></em></p>
-
-    <hr>
-
-    <div class="footer">
-      get the source code on GitHub :
-      <a href="https://github.com/novnc/noVNC">novnc/noVNC</a>
+    <div class="menu">
+      <a href="info.html">Home</a>
+      <a href="https://github.com/novnc/noVNC/releases">Download</a>
+      <a href="http://novnc.com/noVNC/vnc.html">Demo</a>
+      <a href="screenshots.html" class="selected">Media</a>
+      <a href="https://github.com/novnc/noVNC">GitHub</a>
+      <a href="https://groups.google.com/forum/#!forum/novnc">Forum</a>
+      <a href="https://github.com/novnc/noVNC/issues">Report bug</a>
     </div>
 
-  </div>
+    <div id="content" class="wrapper">
 
-</body>
+      <p>See <a href="info.html">homepage</a> and
+        <a href="https://github.com/novnc/noVNC/blob/master/README.md">
+          README</a>
+        for more info.
+      </p>
+
+      <br/><br/>
+
+      <iframe width="700" height="393"
+              src="https://www.youtube.com/embed/b5tBNdncDNk?ecver=1"
+              frameborder="0" allowfullscreen>
+      </iframe>
+      <br/>
+
+      A very quick 1 minute demo showing noVNC in Firefox on Windows 10 used to
+      connect to a GNOME desktop.
+
+      <br/><br/><br/>
+
+      <a href="img/noVNC-1-login.png" target="_blank">
+        <img src="img/noVNC-1-login.png"/></a>
+      <br/>
+      The login screen of noVNC. You will be prompted for a password if your
+      server requires one.
+
+      <br/><br/><br/>
+
+      <a href="img/noVNC-2-translations.png" target="_blank">
+        <img src="img/noVNC-2-translations.png"/></a>
+      <br/>
+      The interface is translated. German translation shown here.
+
+      <br/><br/><br/>
+
+      <a href="img/noVNC-3-connected.png" target="_blank">
+        <img src="img/noVNC-3-connected.png"/></a>
+      <br/>
+      Connected to an <em>TigerVNC</em> server running on a Fedora 25
+      workstation with an GNOME 3 desktop, Google Chrome, gnome-calculator,
+      gnome-terminal and nautilus. Yes, that's Chrome running "inside" of
+      Firefox. Clicking the small handle to the left will open the control bar.
+
+      <br/><br/><br/>
+
+      <a href="img/noVNC-4-settings.png" target="_blank">
+        <img src="img/noVNC-4-settings.png"/></a>
+      <br/>
+      There are many settings in the interface, including local cursor, scaling,
+      clipping mode for viewport panning and automatic reconnection.
+
+      <br/><br/><br/>
+
+      <a href="img/noVNC-5-clipboard.png" target="_blank">
+        <img src="img/noVNC-5-clipboard.png"/></a>
+      <br/>
+      A solution for clipboard transfer is available. Text copied in the remote
+      desktop will appear in the clipboard box in noVNC's interface. You can
+      then copy the text from that box to access it in your local clipboard. Any
+      text put into the clipboard box will be sent to the remote clipboard as
+      well.
+
+      <br/><br/><br/>
+
+      <a href="img/noVNC-6-extrabuttons.png" target="_blank">
+        <img src="img/noVNC-6-extrabuttons.png"/></a>
+      <br/>
+      Some keyboard keys and combinations are intercepted by the browser. We
+      have added the most common keys to the interface to allow such keys to be
+      sent to the remote desktop. Note that the control bar can be dragged to
+      whichever side you prefer, simply drag the handle.
+
+      <br/><br/><br/>
+
+      <a href="img/noVNC-7-android.png" target="_blank">
+        <img src="img/noVNC-7-android.png"/></a>
+      <br/>
+      Connected to the same remote system using Firefox on a Samsung Galaxy S8
+      running Android 7. Notice the mouse and keyboard buttons in the control
+      bar for selecting the active mouse button and for toggling the on-screen
+      keyboard. You can run noVNC in fullscreen mode if you want (third button
+      from the bottom).
+
+      <br/><br/><br/>
+
+      <a href="img/noVNC-8-ipad.jpg" target="_blank">
+        <img src="img/noVNC-8-ipad.jpg"/></a>
+      <br/>
+      Connected to the same remote system using Safari on an iPad mini 3 running
+      iOS 10.
+
+      <br/><br/><br/>
+
+      <hr/>
+
+      <p align="center"><em><small>This page was last updated the
+            <time datetime="2017-05-13">13th of May 2017</time>
+      </small></em></p>
+
+      <hr/>
+
+      <div class="footer">
+        get the source code on GitHub :
+        <a href="https://github.com/novnc/noVNC">novnc/noVNC</a>
+      </div>
+
+    </div>
+
+  </body>
 </html>

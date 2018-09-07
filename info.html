@@ -1,157 +1,169 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-  <!-- TODO: Update to use the noVNC/ submodule instead, once it's updated -->
-  <!-- Firefox currently mishandles SVG, see #1419039
-  <link rel="icon" sizes="any" type="image/svg+xml"
-        href="noVNC/app/images/icons/novnc-icon.svg" />
-  -->
-  <!-- Repeated last so that legacy handling will pick this -->
-  <link rel="icon" sizes="16x16" type="image/png"
-        href="noVNC/app/images/icons/novnc-16x16.png" />
 
-  <link rel="stylesheet" href="info.css" />
+    <!-- TODO: Update to use the noVNC/ submodule instead, once it's updated -->
+    <!-- Firefox currently mishandles SVG, see #1419039
+    <link rel="icon" sizes="any" type="image/svg+xml"
+          href="noVNC/app/images/icons/novnc-icon.svg" />
+    -->
+    <!-- Repeated last so that legacy handling will pick this -->
+    <link rel="icon" sizes="16x16" type="image/png"
+          href="noVNC/app/images/icons/novnc-16x16.png" />
 
-  <title>noVNC</title>
-</head>
+    <link rel="stylesheet" href="info.css" />
 
-<body>
+    <title>noVNC</title>
+  </head>
+
+  <body>
     <a href="https://github.com/novnc/noVNC" class="fork_banner">
       <img src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
            alt="Fork me on GitHub" />
     </a>
 
-  <div id="top">
+    <div id="top">
 
-    <div class="wrapper">
-
-      <a href="info.html" class="noVNC_logo">
-        <span>no</span>VNC</a>
-
-    </div>
-
-    <div class="description">
       <div class="wrapper">
-        Open Source VNC client using HTML5 (WebSockets, Canvas)
+
+        <a href="info.html" class="noVNC_logo">
+          <span>no</span>VNC</a>
+
       </div>
+
+      <div class="description">
+        <div class="wrapper">
+          Open Source VNC client using HTML5 (WebSockets, Canvas)
+        </div>
+      </div>
+
     </div>
 
-  </div>
-
-  <div class="menu">
-    <a href="info.html" class="selected">Home</a>
-    <a href="https://github.com/novnc/noVNC/releases">Download</a>
-    <a href="http://novnc.com/noVNC/vnc.html">Demo</a>
-    <a href="screenshots.html">Media</a>
-    <a href="https://github.com/novnc/noVNC">GitHub</a>
-    <a href="https://groups.google.com/forum/?fromgroups#!forum/novnc">Forum</a>
-    <a href="https://github.com/novnc/noVNC/issues">Report bug</a>
-  </div>
-
-  <div id="content" class="wrapper">
-
-<br>
-
-<a href="http://www.twitter.com/noVNC">
-  <img src="http://twitter-badges.s3.amazonaws.com/t_small-a.png"
-       alt="Follow noVNC on Twitter" align="center"/>
-</a>
-Notable commits, announcements and news @
-<a href="http://www.twitter.com/noVNC">noVNC</a>.
-<br><br>
-<a href="http://www.w3.org/html/logo/">
-<img src="img/html5-badge-h-connectivity-graphics.png"
-    alt="HTML5 Powered with Connectivity / Realtime, and Graphics, 3D &amp; Effects"
-    title="HTML5 Powered with Connectivity / Realtime, and Graphics, 3D &amp; Effects"
-    height="32" align="center"/></a>
-HTML5
-<a href="http://dev.w3.org/html5/websockets/">WebSockets</a> and
-<a href="https://dev.w3.org/html5/2dcontext-LC/">Canvas</a>
-<br>
-<br>
-
-<h1>Try it!</h1>
-<p>An online version of the noVNC client is available
-  <a href="http://noVNC.com/noVNC/vnc.html">HERE</a>.</p>
-
-<p>Check out these <a href="screenshots.html">videos and screenshots</a>
-  for examples of how noVNC looks.</p>
-
-<h1>Community</h1>
-<p>noVNC is an active open source project with a lot of users, integrators and
-  developers. If you want to contribute, please read our
-  <a href="https://github.com/novnc/noVNC/wiki/Contributing">
-    contributing guidelines</a> and don't hesitate to submit a pull
-  request on <a href="https://github.com/novnc/noVNC/pulls">github</a>.
-<p>Use our <a href="https://github.com/novnc/noVNC/issues">issue tracker</a>
-  if you want to report a bug. But before opening an issue, please see if some
-  one else already had the same problem before. You can also join in on the
-  discussion in the
-  <a href="https://groups.google.com/forum/?fromgroups#!forum/novnc">
-    noVNC discussion group</a>.</p>
-<p>There are many companies/projects that have integrated noVNC including
-    <a href="http://www.openstack.org">OpenStack</a>,
-    <a href="http://www.opennebula.org">OpenNebula</a>,
-    <a href="http://libvncserver.sourceforge.net">LibVNCServer</a>, and
-    <a href="https://www.cendio.com/products/thinlinc/">ThinLinc</a>.
-    See
-    <a href="https://github.com/novnc/noVNC/wiki/Projects-and-companies-using-noVNC">
-      this wiki page</a>
-    for a more complete list with additional info and links.</p>
-<p>If you want to integrate the core noVNC library into your project, you should
-  check out the <a href="https://github.com/novnc/noVNC/blob/master/docs/API.md">
-    API documentation</a>. To easily get the core library you can use
-  <a href="https://www.npmjs.com/">NPM</a>:
-  <pre>npm install @novnc/novnc</pre>
-  Please note that what's available on NPM is <b>not</b> the full noVNC client,
-  it's only the core modules/library and is lacking a user application.</p>
-
-
-<h1>Install</h1>
-<p>noVNC requires a browser with HTML5 support, this means it works
-  on all major browsers but not on IE 10. See the
-  <a href="https://github.com/novnc/noVNC#browser-requirements">README</a>
-  for more details.</p>
-<p>Get noVNC by downloading one of the archives from the
-  <a href="https://github.com/novnc/noVNC/releases">release page</a>.</p>
-<p>Run a VNC server, run a WebSocket proxy that points to the VNC server, load
-  the page, and connect! See the quick-start instructions in the project
-  <a href="https://github.com/novnc/noVNC/blob/master/README.md#quick-start">
-    README</a> for more details.</p>
-
-<h1>License</h1>
-<p><a href="http://www.mozilla.org/MPL/2.0/">MPL-2.0</a></p>
-<p>See the project
-  <a href="https://github.com/novnc/noVNC/blob/master/LICENSE.txt">
-    LICENSE</a> for more details.</p>
-
-
-<h1>Notable Authors and Contributors</h1>
-<ul>
-    <li><strong>Creator of noVNC</strong>
-      : Joel Martin (github@martintribe.org)</li>
-    <li><strong>Current noVNC core team</strong>
-      : Joel Martin, Solly Ross, Samuel Mannehed, Peter Åstrand, Pierre Ossman
-    <li><strong>UI and Icons</strong>
-      : Pierre Ossman, Chris Gordon</li>
-    <li><strong>Original Logo</strong>
-      : Michael Sersen</li>
-    <li><strong>tight encoding</strong>
-      : Michael Tinglof (Mercuri.ca)</li>
-</ul>
-
-
-    <div class="footer">
-      get the source code on GitHub :
-      <a href="https://github.com/novnc/noVNC">novnc/noVNC</a>
+    <div class="menu">
+      <a href="info.html" class="selected">Home</a>
+      <a href="https://github.com/novnc/noVNC/releases">Download</a>
+      <a href="http://novnc.com/noVNC/vnc.html">Demo</a>
+      <a href="screenshots.html">Media</a>
+      <a href="https://github.com/novnc/noVNC">GitHub</a>
+      <a href="https://groups.google.com/forum/#!forum/novnc">Forum</a>
+      <a href="https://github.com/novnc/noVNC/issues">Report bug</a>
     </div>
 
-  </div>
+    <div id="content" class="wrapper">
+
+      <br/>
+
+      <a href="http://www.twitter.com/noVNC">
+        <img src="http://twitter-badges.s3.amazonaws.com/t_small-a.png"
+             alt="Follow noVNC on Twitter" align="center"/>
+      </a>
+      Notable commits, announcements and news @
+      <a href="http://www.twitter.com/noVNC">noVNC</a>.
+      <br/><br/>
+      <a href="http://www.w3.org/html/logo/">
+        <img src="img/html5-badge-h-connectivity-graphics.png"
+             alt="HTML5 Powered with Connectivity / Realtime, and Graphics, 3D &amp; Effects"
+             title="HTML5 Powered with Connectivity / Realtime, and Graphics, 3D &amp; Effects"
+             height="32" align="center"/>
+      </a>
+      HTML5
+      <a href="http://dev.w3.org/html5/websockets/">WebSockets</a> and
+      <a href="https://dev.w3.org/html5/2dcontext-LC/">Canvas</a>
+      <br/><br/>
+
+      <h1>Try it!</h1>
+      <p>An online version of the noVNC client is available
+        <a href="http://noVNC.com/noVNC/vnc.html">HERE</a>.</p>
+
+      <p>Check out these <a href="screenshots.html">videos and screenshots</a>
+        for examples of how noVNC looks.</p>
+
+      <h1>Community</h1>
+      <p>noVNC is an active open source project with a lot of users, integrators
+        and developers. If you want to contribute, please read our
+        <a href="https://github.com/novnc/noVNC/wiki/Contributing">
+          contributing guidelines</a> and don't hesitate to submit a pull
+        request on <a href="https://github.com/novnc/noVNC/pulls">github</a>.
+      </p>
+      <p>Use our
+        <a href="https://github.com/novnc/noVNC/issues">issue tracker</a>
+        if you want to report a bug. But before opening an issue, please see if
+        some one else already had the same problem before. You can also join in
+        on the discussion in the
+        <a href="https://groups.google.com/forum/?fromgroups#!forum/novnc">
+          noVNC discussion group</a>.
+      </p>
+      <p>There are many companies/projects that have integrated noVNC including
+        <a href="http://www.openstack.org">OpenStack</a>,
+        <a href="http://www.opennebula.org">OpenNebula</a>,
+        <a href="http://libvncserver.sourceforge.net">LibVNCServer</a>, and
+        <a href="https://www.cendio.com/products/thinlinc/">ThinLinc</a>.
+        See
+        <a href="https://github.com/novnc/noVNC/wiki/Projects-and-companies-using-noVNC">
+          this wiki page</a>
+        for a more complete list with additional info and links.
+      </p>
+      <p>If you want to integrate the core noVNC library into your project, you
+        should check out the
+        <a href="https://github.com/novnc/noVNC/blob/master/docs/API.md">
+          API documentation</a>. To easily get the core library you can use
+        <a href="https://www.npmjs.com/">NPM</a>:
+        <pre>npm install @novnc/novnc</pre>
+        Please note that what's available on NPM is <b>not</b> the full noVNC
+        client, it's only the core modules/library and is lacking a user
+        application.
+      </p>
+
+      <h1>Install</h1>
+      <p>noVNC requires a browser with HTML5 support, this means it works
+        on all major browsers but not on IE 10. See the
+        <a href="https://github.com/novnc/noVNC#browser-requirements">README</a>
+        for more details.
+      </p>
+      <p>Get noVNC by downloading one of the archives from the
+        <a href="https://github.com/novnc/noVNC/releases">release page</a>.</p>
+      <p>Run a VNC server, run a WebSocket proxy that points to the VNC server,
+        load the page, and connect! See the quick-start instructions in the
+        project
+        <a href="https://github.com/novnc/noVNC/blob/master/README.md#quick-start">
+          README</a> for more details.
+      </p>
+
+      <h1>License</h1>
+      <p><a href="http://www.mozilla.org/MPL/2.0/">MPL-2.0</a></p>
+      <p>See the project
+        <a href="https://github.com/novnc/noVNC/blob/master/LICENSE.txt">
+          LICENSE</a> for more details.
+      </p>
 
 
-</body>
+      <h1>Notable Authors and Contributors</h1>
+      <ul>
+        <li><strong>Creator of noVNC</strong>
+          : Joel Martin (github@martintribe.org)</li>
+        <li><strong>Current noVNC core team</strong>
+          : Joel Martin, Solly Ross, Samuel Mannehed, Peter Åstrand, Pierre
+          Ossman</li>
+        <li><strong>UI and Icons</strong>
+          : Pierre Ossman, Chris Gordon</li>
+        <li><strong>Original Logo</strong>
+          : Michael Sersen</li>
+        <li><strong>tight encoding</strong>
+          : Michael Tinglof (Mercuri.ca)</li>
+      </ul>
+
+
+      <div class="footer">
+        get the source code on GitHub :
+        <a href="https://github.com/novnc/noVNC">novnc/noVNC</a>
+      </div>
+
+    </div>
+
+
+  </body>
 </html>
