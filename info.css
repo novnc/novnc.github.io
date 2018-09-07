@@ -57,10 +57,30 @@ body {
     margin-top: 10px;
     padding: 0.5em;
     font-style: italic;
-    background-color: #909090;
     color: #ffffff;
 }
 
+.menu {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 8px;
+    background-color: #a9a9a9;
+    position: sticky;
+    position: -webkit-sticky;
+    z-index: 1;
+    top: 0px;
+    white-space: nowrap;
+}
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 9px 15px 9px 15px;
+}
+.menu a.selected {
+    color: #494949;
+    background-color: #ffffff;
+}
 
 #content a {
     color: rgb(110, 132, 163);
@@ -88,4 +108,15 @@ hr {
     text-align: center;
     padding-top: 30px;
     font-style: italic;
+}
+
+@media (max-width: 800px) {
+
+    .menu a {
+        padding: 9px 5px 9px 5px;
+    }
+
+    .fork_banner {
+        position: absolute;
+    }
 }
