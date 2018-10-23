@@ -111,6 +111,13 @@ hr {
     font-style: italic;
 }
 
+@media (max-width: 900px) {
+
+    .fork_banner {
+        position: absolute;
+    }
+}
+
 @media (max-width: 700px) {
 
     .menu a {
@@ -118,6 +125,6 @@ hr {
     }
 
     .fork_banner {
-        position: absolute;
+        display: none;
     }
 }
