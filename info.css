@@ -71,6 +71,7 @@ body {
     z-index: 1;
     top: 0px;
     white-space: nowrap;
+    overflow: auto;
 }
 .menu a {
     text-decoration: none;
