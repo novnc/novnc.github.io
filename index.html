@@ -5,16 +5,16 @@
             // to the info page. Try this immediately to preserve query string.
             var l = window.location
             if (l.search !== "" || l.hash !== "") {
-                window.location = "http://noVNC.com/noVNC/vnc.html" + l.search +
+                window.location = "https://noVNC.com/noVNC/vnc.html" + l.search +
                     l.hash;
             } else {
-                window.location = "http://noVNC.com/info.html";
+                window.location = "https://noVNC.com/info.html";
             }
             // Fallback to http-equiv after 5 seconds
         </script>
-        <meta http-equiv="refresh" content="5; url=http://noVNC.com/info.html" />
+        <meta http-equiv="refresh" content="5; url=https://noVNC.com/info.html" />
     </head>
     <body>
-        <p>Moved to <a href="http://noVNC.com/info.html">http://noVNC.com/noVNC/vnc.html</a></p>
+        <p>Moved to <a href="https://noVNC.com/info.html">https://noVNC.com/noVNC/vnc.html</a></p>
     </body>
 </html>
