@@ -16,6 +16,7 @@
           href="noVNC/app/images/icons/novnc-16x16.png" />
 
     <link rel="stylesheet" href="info.css" />
+    <script src="menu.js"></script>
 
     <title>noVNC</title>
   </head>
@@ -26,26 +27,26 @@
            alt="Fork me on GitHub" />
     </a>
 
-    <div id="top">
+    <div class="top_bar top_spacing"></div>
 
-      <div class="wrapper">
+    <div id="top_content" class="top_bar">
 
-        <a href="info.html" class="noVNC_logo">
-          <span>no</span>VNC</a>
+      <a href="info.html" id="logo" class="noVNC_logo">
+        <span>no</span>VNC
+      </a>
 
+      <div class="menu">
+        <a href="https://github.com/novnc/noVNC/releases">Download</a>
+        <a href="noVNC/vnc.html">Demo</a>
+        <a href="screenshots.html">Media</a>
+        <a href="https://github.com/novnc/noVNC">GitHub</a>
+        <a href="https://groups.google.com/forum/#!forum/novnc">Forum</a>
+        <a href="https://github.com/novnc/noVNC/issues">Report bug</a>
       </div>
 
     </div>
 
-    <div class="menu">
-      <a href="info.html" class="selected">Home</a>
-      <a href="https://github.com/novnc/noVNC/releases">Download</a>
-      <a href="noVNC/vnc.html">Demo</a>
-      <a href="screenshots.html">Media</a>
-      <a href="https://github.com/novnc/noVNC">GitHub</a>
-      <a href="https://groups.google.com/forum/#!forum/novnc">Forum</a>
-      <a href="https://github.com/novnc/noVNC/issues">Report bug</a>
-    </div>
+    <div class="top_bar top_spacing"></div>
 
     <div id="content" class="wrapper">
 

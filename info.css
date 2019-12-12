@@ -5,19 +5,27 @@ body {
     margin: 0;
 }
 
-#top {
-    padding-top: 0.5em;
+.top_bar {
     background-color: #494949;
-    text-align: center;
+    width: 100%;
 }
-#top a {
+#top_content {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    height: 44px;
+    top: 0px;
+}
+#top_content a {
     text-decoration: none;
 }
 
+.top_spacing {
+    height: 20px;
+}
+
 .wrapper {
-    position: relative;
-    margin: auto;
-    max-width: 700px;
+    padding: 0px 20% 0px 20%;
 }
 .wrapper img {
     max-width: 700px;
@@ -43,33 +51,37 @@ body {
 }
 .noVNC_logo {
     color: yellow;
-    font-size: 4.0em;
+    font-size: 3.5em;
     font-family: 'Orbitron', 'OrbitronTTF', sans-serif;
-    line-height: 90%;
+    line-height: 70%;
     text-shadow: 0.1em 0.1em 0 black;
+    transition: 0.1s;
+    padding: 0 0 0 20%;
 }
 .noVNC_logo span {
     color:green;
 }
 
+.logo_small {
+    font-size: 2.0em;
+    line-height: 95%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 
 .menu {
     text-align: center;
-    font-size: 1.1em;
-    font-weight: bold;
-    padding: 8px;
-    background-color: #a9a9a9;
-    position: sticky;
-    position: -webkit-sticky;
+    font-size: 19px;
+    padding: 12px 20% 12px 35px;
     z-index: 1;
     top: 0px;
     white-space: nowrap;
-    overflow: auto;
+    overflow: hidden;
 }
 .menu a {
     text-decoration: none;
     color: #ffffff;
-    padding: 9px 15px 9px 15px;
+    padding: 0 15px 0 15px;
 }
 .menu a.selected {
     color: #494949;
@@ -104,20 +116,26 @@ hr {
     font-style: italic;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
 
+    .wrapper {
+        padding: 0 1em 0 1em;
+    }
+    .noVNC_logo {
+        padding-left: 1em;
+    }
+    .menu {
+        padding: 0.8em 2em 0.8em 2em;
+    }
     .fork_banner {
-        position: absolute;
+        display: none;
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 920px) {
 
-    .menu a {
-        padding: 9px 5px 9px 5px;
-    }
-
-    .fork_banner {
+    .menu {
         display: none;
+        top: 64px;
     }
 }
