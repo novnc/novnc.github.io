@@ -1,24 +1,23 @@
+// HTML INCLUDE FUNCTIONS
+
 document.addEventListener("DOMContentLoaded", function(e) {
     includeHTML();
-
-    let logo_elem = document.getElementById("logo");
-    let menu_icon_elem = document.getElementById("menu_icon");
-    let menu_elem = document.getElementById("menu");
-
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 20) {
-            logo_elem.classList.add("logo_small");
-            menu_elem.classList.add("open_small");
-        } else {
-            logo_elem.classList.remove("logo_small");
-            menu_elem.classList.remove("open_small");
-        }
-    }, false);
-
-    menu_icon_elem.addEventListener("click", function () {
-        menu_elem.classList.toggle("open");
-    }, false);
 });
+
+function includeFinished() {
+    try {
+        // Call all normal functions here
+        setupMenuHandlers();
+    } catch (e) {
+        if (e instanceof TypeError) {
+            // Something is missing - the required include will come later,
+            // let's wait for next call to includeFinished()
+            return;
+        } else {
+            throw e;
+        }
+    }
+}
 
 function includeHTML() {
     // Loop through all HTML elements
@@ -47,6 +46,8 @@ function includeHTML() {
                         elem.innerHTML = "Page not found.";
                     }
 
+                    includeFinished();
+
                     /* Remove the attribute, and call this function once more: */
                     elem.removeAttribute("include-html");
                     includeHTML();
@@ -60,4 +61,26 @@ function includeHTML() {
             return;
         }
     }
+}
+
+// NORMAL FUNCTIONS
+
+function setupMenuHandlers() {
+    let logo_elem = document.getElementById("logo");
+    let menu_icon_elem = document.getElementById("menu_icon");
+    let menu_elem = document.getElementById("menu");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 20) {
+            logo_elem.classList.add("logo_small");
+            menu_elem.classList.add("open_small");
+        } else {
+            logo_elem.classList.remove("logo_small");
+            menu_elem.classList.remove("open_small");
+        }
+    }, false);
+
+    menu_icon_elem.addEventListener("click", function () {
+        menu_elem.classList.toggle("open");
+    }, false);
 }
