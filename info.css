@@ -54,7 +54,7 @@ body {
     color: yellow;
     font-size: 3.5em;
     font-family: 'Orbitron', 'OrbitronTTF', sans-serif;
-    line-height: 70%;
+    line-height: 95%;
     text-shadow: 0.1em 0.1em 0 black;
     transition: 0.1s;
     padding: 0 0 0 20%;
@@ -65,7 +65,7 @@ body {
 
 .logo_small {
     font-size: 2.0em;
-    line-height: 95%;
+    line-height: 120%;
     padding-top: 5px;
     padding-bottom: 5px;
 }
