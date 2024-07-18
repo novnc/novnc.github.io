@@ -27,7 +27,8 @@ body {
 }
 
 .wrapper {
-    padding: 0px 20% 0px 20%;
+    max-width: 900px;
+    margin: auto;
 }
 .wrapper iframe {
     border-radius: 6px;
@@ -62,7 +63,7 @@ body {
     line-height: 95%;
     text-shadow: 0.1em 0.1em 0 black;
     transition: 0.4s;
-    padding: 0 0 0 20%;
+    padding: 0;
 }
 .noVNC_logo span {
     color:green;
@@ -99,6 +100,7 @@ body {
 }
 
 #content {
+    padding: 0 1em 0 1em;
     overflow: auto;
 }
 #content a {
@@ -132,9 +134,6 @@ hr {
 
 @media (max-width: 1200px) {
 
-    .wrapper {
-        padding: 0 1em 0 1em;
-    }
     .noVNC_logo {
         padding-left: 1em;
     }
