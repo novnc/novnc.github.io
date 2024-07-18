@@ -70,17 +70,19 @@ body {
 #menu {
     text-align: center;
     font-size: 19px;
-    padding: 12px 20% 12px 35px;
+    padding: 12px 0 12px 35px;
     z-index: 1;
     top: 0px;
     white-space: nowrap;
     overflow: hidden;
     display: flex;
     align-items: center;
+    box-sizing: border-box;
 }
 #menu a {
     color: #ffffff;
     padding: 0 15px 0 15px;
+    font-weight: 600;
 }
 
 #menu_icon {
@@ -134,6 +136,7 @@ hr {
     }
     #menu {
         padding: 0.8em 2em 0.8em 2em;
+        font-size: medium;
     }
     .github-fork-ribbon {
         display: none;
