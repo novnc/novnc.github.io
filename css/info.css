@@ -63,13 +63,6 @@ body {
     color:green;
 }
 
-.logo_small {
-    font-size: 2.0em;
-    line-height: 120%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
 #menu {
     text-align: center;
     font-size: 19px;
@@ -152,9 +145,6 @@ hr {
         width: 100%;
         background-color: #a9a9a9;
         padding: 8px;
-    }
-    #menu.open_small {
-        top: 44px;
     }
     #menu_icon {
         display: block;
