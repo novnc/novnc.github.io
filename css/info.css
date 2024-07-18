@@ -30,11 +30,8 @@ body {
     max-width: 900px;
     margin: auto;
 }
+.wrapper img,
 .wrapper iframe {
-    max-width: min(700px, 100%);
-    border-radius: 6px;
-}
-.wrapper img {
     max-width: min(700px, 100%);
     max-height: 900px;
     border-radius: 6px;
