@@ -28,9 +28,13 @@ body {
 .wrapper {
     padding: 0px 20% 0px 20%;
 }
+.wrapper iframe {
+    border-radius: 6px;
+}
 .wrapper img {
     max-width: 700px;
     max-height: 1200px;
+    border-radius: 6px;
 }
 
 .fork_banner {
@@ -104,6 +108,7 @@ pre {
     background: #000;
     color: #fff;
     padding: 15px;
+    border-radius: 6px;
 }
 
 hr {
