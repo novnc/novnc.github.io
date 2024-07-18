@@ -97,6 +97,9 @@ body {
     margin: 5px 0;
 }
 
+#content {
+    overflow: auto;
+}
 #content a {
     color: rgb(110, 132, 163);
     text-decoration: none;
