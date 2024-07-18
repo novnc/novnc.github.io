@@ -53,8 +53,8 @@ body {
     font-family: 'Orbitron';
     font-style: normal;
     font-weight: 700;
-    src: local('?'), url('noVNC/app/styles/Orbitron700.woff') format('woff'),
-    url('noVNC/app/styles/Orbitron700.ttf') format('truetype');
+    src: local('?'), url('../noVNC/app/styles/Orbitron700.woff') format('woff'),
+    url('../noVNC/app/styles/Orbitron700.ttf') format('truetype');
 }
 .noVNC_logo {
     color: yellow;
