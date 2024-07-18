@@ -5,10 +5,10 @@
             // to the info page. Try this immediately to preserve query string.
             var l = window.location
             if (l.search !== "" || l.hash !== "") {
-                window.location = "https://noVNC.com/noVNC/vnc.html" + l.search +
+                window.location.href = "noVNC/vnc.html" + l.search +
                     l.hash;
             } else {
-                window.location = "https://noVNC.com/info.html";
+                window.location.href = "info.html";
             }
             // Fallback to http-equiv after 5 seconds
         </script>
