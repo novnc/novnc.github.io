@@ -99,18 +99,26 @@ body {
     margin: 5px 0;
 }
 
+#description {
+    background-color: #f7f7f7;
+    padding: 1.5em 1em;
+    border-bottom: 1px solid #e0e0e0;
+}
+
 #content {
     padding: 0 1em 0 1em;
     overflow: auto;
 }
-#content a {
-    color: rgb(110, 132, 163);
-    text-decoration: none;
-    font-weight: bold;
-}
 #content h1 {
     color: #575757;
     border-bottom: 1px solid #e0e0e0;
+}
+
+#content a,
+#description a {
+    color: rgb(110, 132, 163);
+    text-decoration: none;
+    font-weight: bold;
 }
 
 pre {
