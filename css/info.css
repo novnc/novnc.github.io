@@ -75,6 +75,8 @@ body {
     top: 0px;
     white-space: nowrap;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 #menu a {
     color: #ffffff;
