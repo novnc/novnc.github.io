@@ -5,17 +5,18 @@ body {
     margin: 0;
 }
 
-.top_bar {
+#top_bar {
     background-color: #494949;
-    width: 100%;
+    position: sticky;
+    top: 0px;
+    box-shadow: 0 0 0 1px #494949;
+    padding: 20px 0;
 }
 #top_content {
     display: flex;
     justify-content: space-between;
-    position: sticky;
     height: 44px;
-    top: 0px;
-    box-shadow: 0 0 0 1px #494949;
+    position: relative; /* For absolute-positioned menu on small screens */
 }
 #top_content a {
     text-decoration: none;
